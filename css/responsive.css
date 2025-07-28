@@ -1,0 +1,11 @@
+@media (max-width: 1024px) {
+    .about-section{
+        height: fit-content;
+        padding: 4rem;
+    }
+    .card-container{
+        display: flex;
+        flex-direction: column;
+
+    }
+}
