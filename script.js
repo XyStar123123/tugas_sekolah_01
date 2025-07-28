@@ -29,16 +29,14 @@ function addShootingStar() {
     const shootingStar = document.createElement('div');
     shootingStar.className = 'shooting-star';
     
-    // Random position from top
-    const startY = Math.random() * 50; // Start from top half
-    const angle = Math.random() * 30 + 15; // Angle between 15-45 degrees
+    const startY = Math.random() * 50;
+    const angle = Math.random() * 30 + 15;
     
     shootingStar.style.top = `${startY}%`;
     shootingStar.style.transform = `rotate(${angle}deg)`;
     
     starSection.appendChild(shootingStar);
     
-    // Remove after animation completes (5s)
     setTimeout(() => {
         if (shootingStar.parentNode) {
             shootingStar.remove();
@@ -46,9 +44,8 @@ function addShootingStar() {
     }, 5000);
 }
 
-// Add shooting star every 3-10 seconds
 setInterval(() => {
-    if (Math.random() > 0.7) { // 30% chance to spawn a shooting star
+    if (Math.random() > 0.7) {
         addShootingStar();
     }
 }, 3000);
